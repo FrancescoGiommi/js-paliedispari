@@ -11,13 +11,21 @@ let userNumber;
 /* PROCEDURA */
 /* ELABORAZIONE */
 /* chiedo all'utente di scegliere un numero pari o dispari */
-const choiceNumber = prompt('Scegli un numero "Pari" o "Dispari" tra 1 e 5 ');
+const choiceEvenOrOdd = prompt('Scegli "Pari" o "Dispari"');
+const choiceNumber = parseInt(prompt("Scegli un numero tra 1 e 5 "));
+
 console.log(choiceNumber);
 
 /* genero un numero random per il computer con una funzione */
-
+function randomNumber(min, max) {
+  pcNumber = Math.floor(Math.random(min - max) * 5) + 1;
+  return pcNumber;
+}
+const generatorNumberPc = randomNumber();
+console.log(generatorNumberPc);
 /* faccio somma i 2 numeri */
-
+const sum = choiceNumber + generatorNumberPc;
+console.log(`La somma dei numeri è ${sum}`);
 /* stabilisco se la somma dei numeri è pari o dospari con una funzione */
 
 /* dichiaro il vincitore */
