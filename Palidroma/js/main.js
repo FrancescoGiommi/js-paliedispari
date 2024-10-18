@@ -12,17 +12,19 @@ let wordRequest = prompt("Inserisci una parola");
 
 /* creo la funzione */
 
-function reverseString(parola) {
-  parola = parola.split("");
-  reverseArray = parola.reverse();
+function reverseString(word) {
+  word = word.split("");
+  reverseArray = word.reverse();
   joinArray = reverseArray.join("");
   return joinArray;
 }
 console.log(reverseString(wordRequest));
 
+/* se la parola è palindroma */
 if (wordRequest == reverseString(wordRequest)) {
   alert("La parola è un palindromo");
   console.log("La parola è un palindromo");
+  /* se la parola non è palindroma */
 } else {
   alert("La parola non è un palindromo");
   console.log("La parola non è un palindromo");
