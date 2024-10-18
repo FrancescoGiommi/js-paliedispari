@@ -11,6 +11,7 @@ Creare una funzione per capire se la parola inserita è palindroma
 let wordRequest = prompt("Inserisci una parola");
 
 /* creo la funzione */
+
 function reverseString(parola) {
   parola = parola.split("");
   reverseArray = parola.reverse();
@@ -19,7 +20,16 @@ function reverseString(parola) {
 }
 console.log(reverseString(wordRequest));
 
+if (wordRequest == reverseString(wordRequest)) {
+  alert("La parola è un palindromo");
+  console.log("La parola è un palindromo");
+} else {
+  alert("La parola non è un palindromo");
+  console.log("La parola non è un palindromo");
+}
+
 /* OUTPUT */
+console.log(`wordRequest: ${wordRequest}`);
 
 /*Consigli del giorno
 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
