@@ -6,8 +6,22 @@ Creare una funzione per capire se la parola inserita è palindroma
 
 /* PROCEDURA */
 /* ELABORAZIONE */
+
 /* chiedo all'utente di inserie una parola  */
 const wordRequest = prompt("Inserisci una parola");
+console.log(wordRequest);
+
+/* creo la funzione */
+function reverseString() {
+  if (wordRequest == reverseString) {
+    alert("La tua parola è palindroma");
+  } else if (wordRequest != reverseString) {
+    alert("La tua parola non è palindroma");
+  }
+  return reverseString;
+}
+console.log(reverseString());
+
 /* OUTPUT */
 
 /*Consigli del giorno
