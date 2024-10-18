@@ -11,10 +11,11 @@ let userNumber;
 /* PROCEDURA */
 /* ELABORAZIONE */
 /* chiedo all'utente di scegliere un numero pari o dispari */
-const choiceEvenOrOdd = prompt('Scegli "Pari" o "Dispari"');
-const choiceNumber = parseInt(prompt("Scegli un numero tra 1 e 5 "));
+const choiceEvenOrOdd = prompt(`Scegli "pari" o "dispari"`);
 
-console.log(choiceNumber);
+userNumber = parseInt(prompt(`Scegli un numero tra 1 e 5`));
+
+console.log(userNumber);
 
 /* genero un numero random per il computer con una funzione */
 function randomNumber(min, max) {
@@ -23,12 +24,31 @@ function randomNumber(min, max) {
 }
 const generatorNumberPc = randomNumber();
 console.log(generatorNumberPc);
+
 /* faccio somma i 2 numeri */
-const sum = choiceNumber + generatorNumberPc;
+let sum = userNumber + generatorNumberPc;
 console.log(`La somma dei numeri è ${sum}`);
-/* stabilisco se la somma dei numeri è pari o dospari con una funzione */
+
+/* stabilisco se la somma dei numeri è pari o dIspari con una funzione */
+function sumEvenOrOdd(Even, Odd) {
+  Even = "pari";
+  Odd = "dispari";
+  if (sum % 2 === 0) {
+    winner = Even;
+    alert(`La somma è pari`);
+    console.log(`La somma è pari`);
+  } else {
+    winner = Odd;
+    alert(`La somma è dispari`);
+    console.log(`La somma è dispari`);
+  }
+  return winner;
+}
 
 /* dichiaro il vincitore */
+const theWinner = sumEvenOrOdd ? userNumber : generatorNumberPc;
+console.log(`Il vincitore è` + theWinner);
+
 /* OUTPUT */
 
 /*Consigli del giorno
