@@ -13,8 +13,9 @@ let userNumber;
 /* chiedo all'utente di scegliere un numero pari o dispari */
 const choiceEvenOrOdd = prompt(`Scegli "pari" o "dispari"`);
 
-userNumber = parseInt(prompt(`Scegli un numero tra 1 e 5`));
-
+userNumber = parseInt(
+  prompt(`Scegli un numero tra` + " " + 1 + " " + " " + "e" + " " + " " + 5)
+);
 console.log(userNumber);
 
 /* genero un numero random per il computer con una funzione */
@@ -27,7 +28,7 @@ console.log(generatorNumberPc);
 
 /* faccio somma i 2 numeri */
 let sum = userNumber + generatorNumberPc;
-console.log(`La somma dei numeri è ${sum}`);
+console.log(`La somma dei numeri è ` + " " + sum);
 
 /* stabilisco se la somma dei numeri è pari o dIspari con una funzione */
 function sumEvenOrOdd(Even, Odd) {
