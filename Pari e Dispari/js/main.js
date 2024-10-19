@@ -7,6 +7,8 @@ Dichiariamo chi ha vinto.
 
 /* RACCOLTA DATI */
 let userNumber;
+Even = "pari";
+Odd = "dispari";
 
 /* PROCEDURA */
 /* ELABORAZIONE */
@@ -23,7 +25,7 @@ function randomNumber(min, max) {
   pcNumber = Math.floor(Math.random(min - max) * 5) + 1;
   return pcNumber;
 }
-const generatorNumberPc = randomNumber();
+let generatorNumberPc = randomNumber();
 console.log(generatorNumberPc);
 
 /* faccio somma i 2 numeri */
@@ -35,22 +37,32 @@ function sumEvenOrOdd(Even, Odd) {
   Even = "pari";
   Odd = "dispari";
   if (sum % 2 === 0) {
-    winner = Even;
-    alert(`La somma è pari`);
+    result = Even;
     console.log(`La somma è pari`);
+    return result;
   } else {
-    winner = Odd;
-    alert(`La somma è dispari`);
+    result = Odd;
     console.log(`La somma è dispari`);
+    return result;
   }
-  return winner;
 }
+const theWinner = sumEvenOrOdd();
 
 /* dichiaro il vincitore */
-const theWinner = sumEvenOrOdd ? userNumber : generatorNumberPc;
-console.log(`Il vincitore è` + theWinner);
+
+if (theWinner == (sum % 2 === 0) && userNumber == (sum % 2 === 0)) {
+  console.log("vince il giocatore");
+} else {
+  console.log("vince il computer");
+}
 
 /* OUTPUT */
+console.log(`
+  userNumber: ${userNumber}
+  choiceEvenOrOdd: ${choiceEvenOrOdd}
+  generatorNumberPc: ${generatorNumberPc}
+  theWinner: ${theWinner}
+  `);
 
 /*Consigli del giorno
 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
